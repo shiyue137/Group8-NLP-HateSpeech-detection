@@ -1,0 +1,22 @@
+# System files
+.DS_Store
+.idea/
+.vscode/
+
+# Python
+.venv/
+__pycache__/
+*.py[cod]
+*.so
+
+# Large Data files
+saved_models/ensemble_full.pkl
+saved_models/char_bigram_features.csv
+feature datasets/*.csv
+
+# Optional: Ignore all datasets if they are too big, but keeping them for now if < 100MB
+# initial datasets/
+# feature datasets/
+
+# Logs
+*.log
