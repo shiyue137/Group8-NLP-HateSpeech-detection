@@ -13,25 +13,25 @@
 <a name="-group-8---hate-speech-detection-system-english"></a>
 ## 📖 Project Overview (English)
 
-**Hate Speech Detection System** is an advanced NLP-based system designed to detect and mitigate hate speech in online text. Developed by **Group 8** for our NLP course project, this system leverages a hybrid approach combining traditional linguistic features and state-of-the-art **BERT embeddings**.
+**Hate Speech Detection System** is an NLP-based system designed to detect and categorize hate speech in online text. Developed by **Group 8** for our NLP course project, this system leverages a hybrid approach combining traditional linguistic features and **BERT embeddings**.
 
-The system not only classifies text into **Hate Speech**, **Offensive Language**, or **Neutral**, but also provides a real-time visualization of confidence scores and an automatic **hate word masking** feature to foster a safer online environment.
+The system classifies text into **Hate Speech**, **Offensive Language**, or **Neutral**, provides confidence score analysis, and implements **keyword masking** for sensitive terms.
 
 ### ✨ Key Features
 
 - **🚀 Hybrid Model Architecture**: 
-  - Integrates **BERT Contextual Embeddings** for deep semantic understanding.
+  - Integrates **pre-trained BERT contextual embeddings** as semantic feature representations.
   - Utilizes **TF-IDF & Weighted TF-IDF** for keyword importance.
-  - Incorporates **Sentiment Analysis** & **Dependency Parsing** features.
+  - Incorporates **Sentiment Analysis** & **Dependency Parsing** features (Note: Dependency features are used as auxiliary inputs).
   - **Ensemble Voting Classifier** (Logistic Regression + Random Forest + XGBoost) for robust predictions.
 
 - **📊 Comprehensive Analysis**:
   - Classification: `Hate Speech` | `Offensive` | `Neither`.
   - Confidence score visualization for each category.
 
-- **🛡️ Smart Mitigation**:
-  - **Auto-Masking**: Automatically detects and censors explicit hate terms.
-  - **Sensitive Word Dictionary**: Built-in and extensible dictionary for keyword filtering.
+- **🛡️ Mitigation Features**:
+  - **Keyword Masking**: Automatically detects and masks explicit hate terms.
+  - **Sensitive Word Dictionary**: Built-in dictionary for keyword filtering.
 
 - **🖥️ Interactive UI**:
   - User-friendly web interface built with **Streamlit**.
@@ -41,28 +41,45 @@ The system not only classifies text into **Hate Speech**, **Offensive Language**
 <a name="-group-8---仇恨言论检测系统-简体中文"></a>
 ## 📖 项目简介 (简体中文)
 
-**Hate Speech Detection System** 是一个基于 NLP 技术的仇恨言论检测与缓解系统。本项目由 **第八组 (Group 8)** 开发，作为自然语言处理课程作业，采用了结合传统语言学特征与 **BERT** 深度学习特征的混合模型方法。
+**Hate Speech Detection System** 是一个基于 NLP 技术的仇恨言论检测系统。本项目由 **第八组 (Group 8)** 开发，作为自然语言处理课程作业，采用了结合传统语言学特征与 **BERT** 嵌入的混合模型方法。
 
-该系统不仅能够将文本分类为 **仇恨言论**、**攻击性语言** 或 **正常言论**，还提供实时的置信度可视化，并具备自动 **仇恨词屏蔽** 功能，致力于构建更安全的网络环境。
+该系统将文本分类为 **仇恨言论**、**攻击性语言** 或 **正常言论**，提供置信度分析，并具备 **关键词屏蔽** 功能。
 
 ### ✨ 核心功能
 
 - **🚀 混合模型架构**: 
-  - 集成 **BERT 上下文嵌入**，深度理解语义。
+  - 集成 **预训练 BERT 的上下文语义向量作为特征表示**。
   - 利用 **TF-IDF & 加权 TF-IDF** 捕捉关键词特征。
-  - 融合 **情感分析** 与 **依存句法分析** 特征。
+  - 融合 **情感分析** 与 **依存句法分析** 特征 (注：依存句法仅作为辅助特征)。
   - **投票集成分类器 (Voting Ensemble)**: 结合逻辑回归、随机森林和 XGBoost，提供稳健的预测能力。
 
 - **📊 全面分析**:
   - 多分类检测: `仇恨言论` | `攻击性语言` | `正常言论`。
   - 为每个类别提供详细的置信度评分可视化。
 
-- **🛡️ 智能防护**:
-  - **自动屏蔽**: 自动识别并打码显式仇恨词汇（如 `h*te`）。
-  - **敏感词词典**: 内置可扩展的关键词过滤词典。
+- **🛡️ 缓解功能**:
+  - **关键词屏蔽**: 自动识别并打码显式仇恨词汇（如 `h*te`）。
+  - **敏感词词典**: 内置关键词过滤词典。
 
 - **🖥️ 交互式界面**:
   - 基于 **Streamlit** 构建的现代化 Web 界面，操作简便。
+
+---
+
+## 📊 Model Performance / 模型性能
+
+We evaluated our ensemble model using various metrics. Below are the ROC and Precision-Recall curves:
+我们使用多种指标评估了集成模型。以下是 ROC 曲线和精确率-召回率曲线：
+
+### ROC Curves (ROC 曲线)
+| Multiclass ROC (多分类) | Averaged ROC (平均) |
+|:---:|:---:|
+| ![ROC Multiclass](performance_plots/1_roc_curves_multiclass.png) | ![ROC Averaged](performance_plots/2_roc_curves_averaged.png) |
+
+### Precision-Recall Curves (PR 曲线)
+| Multiclass PR (多分类) | Averaged PR (平均) |
+|:---:|:---:|
+| ![PR Multiclass](performance_plots/3_precision_recall_curves.png) | ![PR Averaged](performance_plots/4_precision_recall_averaged.png) |
 
 ---
 
