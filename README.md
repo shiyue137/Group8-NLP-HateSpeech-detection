@@ -100,7 +100,7 @@ We evaluated our ensemble model using various metrics. Below are the ROC and Pre
 
 ```bash
 # Clone the repository / 克隆仓库
-git clone https://github.com/shiyue137/Group8-NLP-HateSpeech-detection.git
+git clone https://github.com/ItWorksOnMyMachine137/Group7-NLP-HateSpeech-detection.git
 cd Group7-NLP-HateSpeech-detection
 
 # Install dependencies / 安装依赖
