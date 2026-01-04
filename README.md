@@ -41,7 +41,7 @@ The system classifies text into **Hate Speech**, **Offensive Language**, or **Ne
 <a name="-group-7---仇恨言论检测系统-简体中文"></a>
 ## 📖 项目简介 (简体中文)
 
-**Hate Speech Detection System** 是一个基于 NLP 技术的仇恨言论检测系统。本项目由 **第八组 (Group 8)** 开发，作为自然语言处理课程作业，采用了结合传统语言学特征与 **BERT** 嵌入的混合模型方法。
+**Hate Speech Detection System** 是一个基于 NLP 技术的仇恨言论检测系统。本项目由 **第七组 (Group 7)** 开发，作为自然语言处理课程作业，采用了结合传统语言学特征与 **BERT** 嵌入的混合模型方法。
 
 该系统将文本分类为 **仇恨言论**、**攻击性语言** 或 **正常言论**，提供置信度分析，并具备 **关键词屏蔽** 功能。
 
